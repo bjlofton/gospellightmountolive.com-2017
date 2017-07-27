@@ -1,0 +1,145 @@
+<?php
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+$errors = '';
+$myemail = 'uhcgospellight@gmail.com';//<-----Put Your email address here.
+if(empty($_POST['name'])  || 
+   empty($_POST['email']) || 
+   empty($_POST['message']))
+{
+$errors = "<script>alert('Error: Name, Email, and Message are required');</script>";
+echo $errors;
+}
+
+$name = $_POST['name']; 
+$phone = $_POST['phone']; 
+$email_address = $_POST['email']; 
+$subject = $_POST['subject']; 
+$message = $_POST['message']; 
+
+if (!preg_match(
+"/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i", 
+$email_address))
+{
+$errors = "<script>alert('Error: Invalid email address');</script>";
+echo $errors;
+}
+
+if( empty($errors))
+{
+	$to = $myemail; 
+	$email_subject = "Hello Gospel Light!";
+	$email_body = "New message.".
+	"\nName: $name \n Phone Number: $phone \n Email: $email_address \n Subject: $subject \n\n Message: \n $message"; 
+	
+	$headers = "From: $email_address\n"; 
+	$headers .= "Reply-To: $email_address";
+	
+	mail($to,$email_subject,$email_body,$headers);
+
+ echo "<script>alert('Your message has been sent!');</script>";
+} }
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gospel Light United Holy Church</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="img/gl.ico">
+<link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+<body>
+
+<div class="container-fluid">
+
+	<div id="banner"><h1>Gospel Light United Holy Church</h1>
+	<img src="img/UHCALogo.gif" class="logo" alt="Logo for UHC of America">
+	</div><!-- end banner -->
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedNav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="collapsedNav">
+				<ul class="nav navbar-nav">
+					<li><h3><a href="index.html">Home</a></h3></li>
+					<li><h3><a href="about.html">About</a></h3></li>
+					<li><h3><a href="pastor.html">Pastor</a></h3></li>
+					<li><h3><a href="aux.html">Auxiliaries</a></h3></li>
+					<li><h3><a href="events.html">Events</a></h3></li>
+					<li class="active"><h3><a href="#">Contact Us</a></h3></li>
+				</ul>
+			</div>
+		</div>
+	</nav><!-- end navbar -->
+	
+	<div id="content">
+
+		<h1 class="page_title">Contact Us</h1>
+		<hr />
+
+		<div class="col-sm-6 info">
+			<div id="contact_info">
+				<p>Gospel Light United Holy Church<br />
+				P.O. Box 806<br />
+				Mt. Olive, NC 28365</p><br />
+				<p>(919) 658-4183</p><br />
+				<p>uhcgospellight@gmail.com</p><br />
+			</div>
+			<div id="social_media">
+				<a href="https://www.facebook.com/pages/Gospel-Light-United-Holy-Church/158033720895646" target="_blank"><img src="img/fb-logo.png" class="fb" alt="facebook logo" /></a>
+			</div>
+
+			<div class="hidden-xs" id="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6521.459317233118!2d-78.064284!3d35.18829!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89abfafe169662c5%3A0xcbb0a86976349c64!2sGospel+Light+United+Holy+Church!5e0!3m2!1sen!2sus!4v1425449537692" width="400" height="300" frameborder="0" class="map"></iframe>
+
+			</div>
+			<div id="icons" class="hidden-lg hidden-md hidden-sm">
+				<a href="https://www.google.com/maps/place/Gospel+Light+United+Holy+Church/@35.1882903,-78.0664722,17z/data=!3m1!4b1!4m5!3m4!1s0x89abfafe169662c5:0xcbb0a86976349c64!8m2!3d35.1882903!4d-78.0642835" target="_blank"><span class="glyphicon glyphicon-map-marker"></span></a>
+			</div>
+		</div>
+
+		<div class="col-sm-6 info">
+			<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" name="contact_form" id="contact_form" method="post">
+				<p>Name *<br />
+				<input type="text" name="name" id="name" size="30" required></p>
+
+				<p>Phone<br />
+				<input type="text" name="phone" id="phone" size="30"></p>
+
+				<p>Email *<br />
+				<input type="text" name="email" id="email" size="30" required></p>
+
+				<p>Subject<br />
+				<input type="text" name="subject" id="subject" size="30"></p>
+
+				<p>Message *<br />
+				<textarea cols="30" rows="5" name="message" id="message" required></textarea></p>
+
+				<input type="submit" name="submit" value="Send" />
+			</form>
+		</div>
+
+	</div><!-- end content -->
+	
+	<footer class="col-sm-12 hidden-xs">
+		Gospel Light United Holy Church | 442 E. Hillsboro St. | Mount Olive, NC 28365 | (919) 658-4183
+	</footer>
+
+	<footer class="hidden-lg hidden-md hidden-sm col-xs-12">
+		Gospel Light United Holy Church<br />442 E. Hillsboro St.<br />Mount Olive, NC 28365 <br />(919) 658-4183
+	</footer>
+
+</div><!-- end container -->
+</body>
+</html>

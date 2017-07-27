@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Gospel Light United Holy Church</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="shortcut icon" href="img/gl.ico">
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<!-- jQuery library -->
+<!-- <script src="//code.jquery.com/jquery-1.11.3.min.js"></script> -->
+<!-- FormatGoogleCalendar Javascript file -->
+<script src="/js/format-google-calendar.js"></script>
+
+<script>
+formatGoogleCalendar.init({
+calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/uhcgospellight@gmail.com/events?key=AIzaSyBiwky5XpSew7Q2f-61WP-_p2Njchnp_BY&maxResults=2500',
+        past: false,
+        upcoming: true,
+        sameDayTimes: false,
+        dayNames: false,
+        pastTopN: 0,
+        upcomingTopN: 6,
+        itemsTagName: 'li',
+		upcomingHeading: '',
+        upcomingSelector: '#events-upcoming',
+        format: ['*summary*']
+});
+</script>
+</head>
+<body>
+
+<div class="container-fluid">
+
+	<div id="banner"><h1>Gospel Light United Holy Church</h1>
+	<img src="img/UHCALogo.gif" class="logo" alt="Logo for UHC of America">
+	</div><!-- end banner -->
+
+	<nav class="navbar navbar-default" role="navigation">
+		<div class="container-fluid">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsedNav">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				</button>
+			</div>
+
+			<div class="collapse navbar-collapse" id="collapsedNav">
+				<ul class="nav navbar-nav">
+					<li class="active"><h3><a href="#">Home</a></h3></li>
+					<li><h3><a href="about.html">About</a></h3></li>
+					<li><h3><a href="pastor.html">Pastor</a></h3></li>
+					<li><h3><a href="aux.html">Auxiliaries</a></h3></li>
+					<li><h3><a href="events.html">Events</a></h3></li>
+					<li><h3><a href="contact.php">Contact Us</a></h3></li>
+				</ul>
+			</div>
+		</div>
+	</nav><!-- end navbar -->
+	
+
+	<div class="container-fluid">
+  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+      <li data-target="#myCarousel" data-slide-to="4"></li>
+      <li data-target="#myCarousel" data-slide-to="5"></li>
+      <li data-target="#myCarousel" data-slide-to="6"></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner" role="listbox">
+
+  <div class="item active">
+        <img src="img/blessed.jpg" alt="Pastor praying for tither">
+      </div>
+      
+      <div class="item">
+        <img src="img/choir.jpg" alt="Choir on Friends & Family Day">
+      </div>
+      <div class="item">
+        <img src="img/praisedance.jpg" alt="Special Praise Dance">
+      </div>
+      <div class="item">
+        <img src="img/mothers.jpg" alt="Mothers of the church">
+      </div>
+      <div class="item">
+        <img src="img/musicians2.jpg" alt="Our musicians">
+      </div>
+      
+      <div class="item">
+        <img src="img/pews1.jpg" alt="guests">
+      </div>
+      <div class="item">
+        <img src="img/praise.jpg" alt="congregation singing and clapping">
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+	
+	<div id="main" class="col-sm-12">
+		<div id="welcome" class="col-sm-4">
+		<div class="sect">
+			<h3 class="subtitle">Welcome</h3>
+				<p>God raises people to handle issues facing the church, society, and His people. This mandate has been placed upon us to accept the challenge of reaping this present day harvest. We must reap and not faint! We are committed to reap this harvest!</p>
+			</div>
+		</div>
+		<div id="services" class="col-sm-4">
+		<div class="sect">
+			<h3 class="subtitle">Services</h3>
+				SUNDAY
+					<div class="indent">Intercessory Prayer  9:30am<br />
+					Bible Church School  9:45am<br />
+					Morning Worship  11:15am</div>
+				WEDNESDAY
+					<div class="indent">Prayer  7:00pm<br />
+					Bible Study  7:30pm</div>
+			</div>
+		</div>
+		<div id="announcements" class="col-sm-4">
+		<div class="sect">
+			<h3 class="subtitle">Upcoming Events</h3>
+				<ul class="events" id="events-upcoming">
+
+				</ul>
+			</div>
+		</div>
+		
+	</div><!-- end main -->
+	
+	<footer class="col-sm-12 hidden-xs">
+		Gospel Light United Holy Church | 442 E. Hillsboro St. | Mount Olive, NC 28365 | (919) 658-4183
+	</footer>
+
+	<footer class="hidden-lg hidden-md hidden-sm col-xs-12">
+		Gospel Light United Holy Church<br />442 E. Hillsboro St.<br />Mount Olive, NC 28365 <br />(919) 658-4183
+	</footer>
+
+</div><!-- end container -->
+</body>
+</html>

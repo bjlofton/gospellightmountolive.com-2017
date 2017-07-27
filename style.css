@@ -1,0 +1,137 @@
+/* CSS Document */
+html {background-color: black;}
+body {background-color: #ededed; font-family:Arial, Verdana;}
+.container-fluid {
+	padding-right: 0;
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 0;
+}
+    
+#banner {
+  background: #68228b; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left, #68228b, #ededed); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(right, #68228b, #ededed); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(right, #68228b, #ededed); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to right, #68228b 0%, #68228b 28%, #aa839c 76%, #ededed 100%); /* Standard syntax */
+  padding: 20px 40px;
+}
+#banner h1 {color: white;
+	margin: 0;
+	font-family: "Snell Roundhand", cursive;
+	font-size: 50px;
+	font-weight: bold;
+	display: inline;
+}
+#banner .logo {float: right; width: 50px; margin: 0;}
+
+.navbar {background-color: #ededed;}
+.navbar-default {border: none;}
+.nav {width: 100%; padding: 0 5%;}
+nav li {margin: 15px 5%;}
+nav a {color: black;}
+nav a:hover {color: #417DC1; text-decoration: none;}
+
+#myCarousel {height: ;}
+.carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+ .carousel-inner .item img {height: 100%;}
+
+#main {padding: 0 5%; margin: 20px 0; line-height: 170%;}
+.sect {width: 90%; height: 220px; margin-left: 20px;}
+.subtitle {font-variant: small-caps; text-decoration: underline;}
+#welcome p {font-style: italic;}
+.indent {margin-left: 25px;}
+
+#announcements:before, #services:before {
+    content:" ";
+    margin:0 -15px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    width: 1px;
+    background: #666;
+  }
+
+footer {background-color: #68228b;;
+	color: white;
+	text-align: center;
+	padding: 20px;}
+	
+/* subpages */
+.page_title {text-align: center;}
+#content hr {border-color: #ccc;}
+#content {padding: 0 10%; margin-bottom: 30px;}
+#content p {line-height: 180%;}
+
+.church {border: solid 5px white; margin: 0 15px 10px 0; width: 300px; float: left;}
+.profile {border: solid 5px white; margin: 0 15px 10px 0; width: 200px; float: left;}
+.profile2 {border: solid 5px white; margin: 10px 0 10px 15px; width: 200px; float: right;}
+
+.auxpic {width: 70%; margin: 0 20% 30px;}
+.auxcol {width: 90%;}
+.auxcol h3 {font-variant: small-caps; margin: 10px 20%;}
+
+.cal {width: 80%; margin: 20px 10%;}
+
+#contact_form input[type="text"] {width: 70%;}
+#contact_form textarea {width: 70%;}
+.fb {width: 40px;}
+.map {border: solid 5px white; clear: both; margin: 20px 0;}
+	
+@media (max-width: 1430px) {
+	nav li {margin: 15px 4%;}
+}
+@media (max-width: 1100px) {
+	#banner h1 {font-size: 40px;}
+	#banner .logo {margin-top: -5px;}
+	nav li {margin: 15px 3%;}
+	.map {width: 300px; height: 250px;}
+}
+@media (max-width: 900px) {
+	nav li h3, .subtitle {font-size: 20px;}
+	.sect {margin-left: 10px; height: 260px;}
+	.cal {width: 100%; margin: 20px 0;}
+
+}
+@media (max-width: 767px) {
+	#banner {padding-left: 20px;}
+	#banner h1 {font-size: 30px;}
+	#banner .logo {margin-top: -10px;}
+	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header {margin-right: 0;}
+	.navbar-default .navbar-toggle {border-color: #ccc;}
+	.navbar-default .navbar-collapse {border-color: #ccc;}
+	.carousel-indicators {bottom: 0;}
+	#main {padding: 0;}
+	#content {padding: 0 20px;}
+	#services, #announcements {width: 50%; float: left;}
+	.sect {height: auto;}
+	#announcements:before, #services:before {
+		content: "";
+	    margin:0;
+	    position: relative;
+	    top: 0px;
+	    bottom: 0px;
+	    width: 0;
+	    background: none;
+}
+	footer {margin-top: 20px;}
+	.church {width: 200px;}
+	.cal {height: 600px;}
+	.remove {display: none;}
+	#social_media, #icons {float: left;}
+	.fb {width: 30px;}
+	.glyphicon-map-marker {font-size: 30px; margin-left: 20px; color: black;}
+	#contact_form {clear: both; margin-top: 70px;}
+}
+@media (max-width: 550px) {
+	#banner {background: #68228b;}
+	#banner .logo {display: none;}
+	.nav {padding: 0 20px;}
+	.container-fluid>.navbar-collapse, .container-fluid>.navbar-header {margin-left: 0;}
+	#services, #announcements {width: 100%;}
+	.cal {height: 400px;}
+}
